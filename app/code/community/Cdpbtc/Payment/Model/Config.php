@@ -12,7 +12,8 @@ class Cdpbtc_Payment_Model_Config
             '1' => 'EUR',
             '2' => 'USD',
             '3' => 'GBP',
-            '9' => 'JPY'
+            '9' => 'JPY',
+            '13' => 'CNY'
         );
     }
 }
