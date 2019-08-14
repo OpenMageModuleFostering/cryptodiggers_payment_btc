@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+   <sections>
+        <payment>
+            <groups>
+                <cdpbtc_payment translate="label" module="paygate">
+                    <label>BTC Payment (CryptoDiggers)</label>
+                    <sort_order>672</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                    	
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </title>
+                        <api_key translate="label">
+                            <label>API key</label>
+                            <comment>
+                            	<![CDATA[
+                            	<span class="notice">This is your <a href="https://www.cryptodiggers.eu/api" target="_blank">CryptoDiggers</a> API key.</span>
+                            	]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </api_key>
+                        <fiat_currency translate="label">
+                            <label>FIAT currency</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>5</sort_order>
+                            <source_model>cdpbtc_payment/config::getAvailableCurrency</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </fiat_currency>
+                        <sec_key translate="label">
+                            <label>Security key</label>
+                            <comment>
+                            	<![CDATA[
+                            	<span class="notice">Please choose a long and random value e.g., "b43b2142b16ab1dd444249140714f604"</span>
+                            	]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sec_key>
+                        <payment_timeout translate="label">
+                            <label>Payment timeout</label>
+                            <comment>
+                            	<![CDATA[
+                            	<span class="notice">This vaule can not be smaller than 10 minute and bigger than 30 minutes.</span>
+                            	]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_timeout>
+                        <wait_confirmations translate="label">
+                            <label>Wait for confirmations ?</label>
+                            <comment>
+                            	<![CDATA[
+                            	<span class="notice">Wait for final confirmation of transaction in check out page.</span>
+                            	]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </wait_confirmations>
+                        <proxy_use translate="label">
+                            <label>Use proxy ?</label>
+                            <comment>
+                            	<![CDATA[
+                            	<span class="notice">Set to Yes, if you want to use proxy server.</span>
+                            	]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </proxy_use>
+                        <proxy_server translate="label">
+                            <label>Proxy server:</label>
+                            <comment>
+                            	<![CDATA[
+                            	<span class="notice">If you use proxy, enter the ip address or name.</span>
+                            	]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </proxy_server>
+                        <proxy_port translate="label">
+                            <label>Proxy port:</label>
+                            <comment>
+                            	<![CDATA[
+                            	<span class="notice">If you use proxy, enter the proxy port.</span>
+                            	]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </proxy_port>
+                        
+                    </fields>
+                </cdpbtc_payment>
+            </groups>
+        </payment>
+    </sections>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<layout>
+	<checkout_onepage_review>
+		<reference name="checkout.onepage.review.info.items.after">
+        	<block name='cdpbtc_payment' type="cdpbtc_payment/payment" />
+    	</reference>		
+	</checkout_onepage_review>	
+</layout>
